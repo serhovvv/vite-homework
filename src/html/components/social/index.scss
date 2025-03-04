@@ -1,0 +1,12 @@
+.social {
+    display: flex;
+    gap: 15px;
+    &__link {
+        &::before{
+            background-color: var(--c-lightgray);
+            height: 14px;
+            width: 14px;
+        }
+
+    }
+}
