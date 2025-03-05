@@ -1,0 +1,50 @@
+@use '../../../styles/mixins'as*;
+
+
+.footer{
+    background-image: url('/src/assets/images/footer-bg.webp');
+    @include bg-cover;
+}
+
+.footer__grid{
+    grid-template-columns: repeat(4, 1fr);
+
+}
+
+.footer-title{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 32px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    color: var(--c-white);
+}
+
+.footer-details{
+    .logo{
+        display: block;
+        margin-bottom: 34px;
+    }
+
+    &__text{
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+.insta-blog {
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+}
+
+.contacts{
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 300;
+}
