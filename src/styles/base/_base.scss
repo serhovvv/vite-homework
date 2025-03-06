@@ -27,4 +27,9 @@ body {
 .wrapper {
   position: relative;
   overflow-x: hidden;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr auto;
+  min-height: 100svh;
 }
