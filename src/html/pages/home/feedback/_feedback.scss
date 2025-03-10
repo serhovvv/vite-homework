@@ -1,0 +1,31 @@
+@use '../../../../styles/mixins'as*;
+
+.feedback{
+    &__inner{
+        display: grid;
+        grid-template-columns: 300px auto;
+    }
+    .content{ 
+
+    }
+    .slider-btn{
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 1px solid currentColor;
+        &::before{
+            content:'';
+
+        }
+    }
+    .slider-actions{
+        display: flex;
+        gap: 12px;
+    }
+    .title{
+        margin-bottom: 35px;
+    }
+    .slider{
+
+    }
+}
