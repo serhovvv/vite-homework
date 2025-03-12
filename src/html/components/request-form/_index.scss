@@ -1,27 +1,59 @@
 @use './../../../styles/mixins'as*;
 
 .request-form{
-    &__title{
 
+    &__title{
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 15px;
+        color: var(--c-white);
     }
 
     &__text{
+        font-size: 14px;
+        margin-bottom: 30px;
+        color: var(--c-white);
+
 
     }
 
     &__body{
-
+        margin-bottom: 30px;
     }
 
     &__group{
-
+        margin-bottom: 24px;
     }
 
     &__input{
+        width: 100%;
+        font-size: 14px;
+        padding: 18px;
+        border: 1px solid currentColor;
+        border-radius: 3px;
+        color: var(--c-white);
 
+        &:focus{
+            border-color: var(--c-pink);
+            outline: 0;
+            transition: border-color 0.3s ease-in-out;
+        }
     }
 
     &__footer{
-        
+        color: var(--c-white);
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        &::before{
+            content: '';
+            width: 24px;
+            height: 24px;
+            @include mask-contain;
+            mask-image: var(--icon-check);
+            background-color: #1BCB42;
+        }
     }
+
+    
 }
