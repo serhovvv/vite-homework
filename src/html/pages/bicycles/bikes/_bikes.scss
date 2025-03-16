@@ -1,11 +1,14 @@
-@use "../../../styles/mixins"as*;
+@use '../../../../styles/mixins'as*;
 
 .bikes{
+
+
     .tabs-nav{
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         gap: 12px;
+        margin-bottom: 45px;
         &__link {
             display: flex;
             align-items: center;
@@ -24,6 +27,7 @@
                 mask-image: var(--icon-arrow-right);
                 width: 16px;
                 height: 16px;
+                background-color: var(--c-dark);
             }
 
             &:focus{
@@ -42,5 +46,11 @@
                 background-color: rgba(255, 40, 91, 0.1);
             }
         }
+    }
+
+    .bikes-list{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
     }
 }

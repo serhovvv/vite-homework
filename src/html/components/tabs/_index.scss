@@ -1,6 +1,7 @@
 .tabs{
     &__wrapper {
         position: relative;
+        overflow: hidden;
     }
 
     &-content {
