@@ -22,6 +22,7 @@ const swiper = new Swiper(' .feedback .swiper', {
 
 const showTabs = (tabsNav, tabsContent) => {
   tabsNav?.forEach((navLink, index) => {
+
     navLink?.addEventListener('click', () => {
       tabsNav.forEach(link => {
         link.classList.remove('active');
@@ -31,11 +32,12 @@ const showTabs = (tabsNav, tabsContent) => {
       navLink.classList.add('active');
 
       let navIndex = index;
+      
       tabsContent.forEach((contentItem, index) => {
-        contentItem.classList.remove('.active');
+        contentItem.classList.remove('active');
 
         if (index === navIndex) {
-          contentItem.classList.add('.active');
+          contentItem.classList.add('active');
         }
       });
     });

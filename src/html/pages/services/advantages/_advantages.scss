@@ -1,0 +1,14 @@
+@use '../../../../styles/mixins'as*;
+
+
+.services-advantages{
+
+    .advantages__inner{
+        padding-block: 60px 100px;
+        justify-content: flex-end;
+
+        background-image: url('/src/assets/images/services/services-advantages.webp');
+        background-position: left center;
+    }
+
+}

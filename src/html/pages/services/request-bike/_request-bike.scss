@@ -1,0 +1,18 @@
+@use '../../../../styles/mixins'as*;
+
+.request-bike{
+    &__inner{
+        display: flex;
+    }
+    .form-wrapper{
+        max-width: 450px;
+    }
+    &__form{
+        color: var(--c-dark);
+
+        .request-form__input{
+            border-color: #9CAAC0;
+        
+        }
+    }
+}
