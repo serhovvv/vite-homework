@@ -1,18 +1,24 @@
 @use '../../../../styles/mixins'as*;
 
-.request-bike{
+.request-bike {
+    
     &__inner{
-        display: flex;
+        // display: flex;
     }
-    .form-wrapper{
+    .form-wrapper {
         max-width: 450px;
     }
+
     &__form{
         color: var(--c-dark);
 
-        .request-form__input{
+        .request-form__input {
             border-color: #9CAAC0;
-        
         }
+
     }
+    h3,p{
+        color: var(--c-dark);
+    }
+    
 }

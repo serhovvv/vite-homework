@@ -1,7 +1,7 @@
 @use './../../../styles/mixins'as*;
 
 .request-form{
-
+    color: var(--c-dark);
     &__title{
         font-size: 24px;
         font-weight: 500;
