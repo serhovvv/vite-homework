@@ -1,12 +1,15 @@
 @use '../../../../styles/mixins'as*;
 
 .request-bike {
-    
-    &__inner{
-        // display: flex;
-    }
+    padding-block: 100px 120px;
+    background-image: url('/src/assets/images/services/black-bicycle.webp');
+    background-repeat: no-repeat;
+    background-size: auto 550px;
+    background-position: right center;
     .form-wrapper {
         max-width: 450px;
+        padding: 50px 40px;
+        background-color: rgb(253, 246, 255);
     }
 
     &__form{
