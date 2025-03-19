@@ -20,7 +20,10 @@
 .contact-info{
     display: flex;
     gap: 40px;
-    
+    @include rmax($md) {
+        font-size: 0;
+        gap: 16px;
+    }
 
     &__link {
         transition: color 0.3s ease-in-out;
@@ -31,6 +34,9 @@
             &::before {
                 color: var(--c-pink);
             }
+
+            
+
         }
 
 
@@ -53,6 +59,21 @@
     display: flex;
     gap: 32px;
 
+    @include rmax($md) {
+        position: absolute;
+        top: calc(100% - 15px);
+        left: -200%;
+        width: 100%;
+        padding-inline: 15px;
+        padding-block: 30px;
+        background-color: var(--c-pink);
+        
+        flex-direction: column;
+        opacity: 0;
+        gap: 24px;
+        transition: 0.3s ease-in-out;
+    }
+
     &__link{
         text-transform: uppercase;
         font-size: 14px;
@@ -63,5 +84,13 @@
             color: var(--c-pink);
 
         }
+    }
+}
+
+.burger.active + .menu {
+
+    @include rmax($md) {
+        left: 0;
+        opacity: 1;
     }
 }

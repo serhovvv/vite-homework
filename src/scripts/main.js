@@ -47,3 +47,18 @@ const showTabs = (tabsNav, tabsContent) => {
 const tabsNav = document.querySelectorAll('.bikes .tabs-nav__link');
 const tabsContent = document.querySelectorAll('.bikes .tabs-content');
 showTabs(tabsNav, tabsContent);
+
+// BURGER
+
+const burgerBtnEl = document.querySelector('.burger');
+
+const handleBurgerClick = () => {
+  burgerBtnEl.classList.toggle('active');
+}
+
+document.addEventListener('click', (e) => {
+
+  if(e.target.classList.contains('burger')){
+    handleBurgerClick();
+  }
+})
