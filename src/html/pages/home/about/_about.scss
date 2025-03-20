@@ -1,8 +1,13 @@
+@use '../../../../styles/mixins'as*;
+
+
 
 .about{
 
     &__inner{
-        padding-block: 140px 175px;
+        // padding-block: 140px 175px;
+        @include size('padding-top', 140, 35, $md);
+        @include size('padding-bottom', 175, 35, $md);
         display: flex;
         justify-content: flex-end;
 
@@ -10,12 +15,25 @@
         background-repeat: no-repeat;
         background-size: 600px;
         background-position: left center;
+
+        @include rmax($xl) {
+            padding-block: 35px;
+            background-size: cover;
+            justify-content: center;
+        }
+
+        
     }
 
     .content{
         max-width: 470px;
-    }
+        background-color: rgba(#fff, 0.9);
+        @include rmax($xl) {
+            padding: 15px;
+            border-radius: 5px;
+        }
 
+    }
 
     .title{
         margin-bottom: 50px;
