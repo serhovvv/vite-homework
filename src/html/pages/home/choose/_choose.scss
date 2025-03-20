@@ -3,8 +3,7 @@
 
 
 .choose-bike{
-    padding-block: 100px;
-
+    @include size('padding-block', 100, 35);
     &__inner {
         display: flex;
         justify-content: space-between;
