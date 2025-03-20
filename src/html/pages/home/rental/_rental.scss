@@ -3,16 +3,41 @@
 
 .rental{
     padding-block: 80px 130px;
+    @include size('padding-top', 80, 35, $md);
+    @include size('padding-bottom', 130, 35, $md);
     background-color: #381C75;
-
+    @include rmin(1400) {
+        background-color: #381C75;
+    }
     &__inner {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include rmax($lg) {
+            flex-direction: column;
+            gap: 24px;
+        }
+    }
+
+    .content{
+        @include rmax($lg) {
+            text-align: center;
+
+            .btn{
+                margin-inline: auto;
+            }
+        }
     }
 
     .title{
         margin-bottom: 50px;
+
+        @include rmax($lg) {
+            margin-bottom: 24px;
+            &::before{
+                margin-inline: auto;
+            }
+        }
     }
 
     .text{
@@ -24,6 +49,11 @@
     display: grid;
     grid-template-columns: repeat(2, 250px);
     gap: 60px;
+
+    @include rmax($sm) {
+        grid-template-columns: 1fr;
+        
+    }
 }
 
 .price-card{
@@ -31,6 +61,10 @@
     flex-direction: column;
     gap: 16px;
 
+    @include rmax($sm){
+        align-items: center;
+        text-align: center;
+    }
     &::before{
         content: '';
         display: block;
