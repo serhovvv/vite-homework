@@ -10,14 +10,23 @@
     color: var(--c-white);
     padding-top: 50px;
     padding-bottom: 20px;
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        @include rmax($lg){
+        grid-template-columns: repeat(2, 1fr);
+
+        }
+        @include rmax ($sm) {
+            grid-template-columns: 1fr;
+
+        }
+    
+    }
 }
 
-.footer__grid{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
 
-}
 
 .footer-title{
     font-weight: 500;
@@ -47,6 +56,9 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
+    }
+    img{
+        width: 100%;
     }
 
 }
