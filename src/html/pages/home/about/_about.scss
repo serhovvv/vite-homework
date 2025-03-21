@@ -6,8 +6,8 @@
 
     &__inner{
         // padding-block: 140px 175px;
-        @include size('padding-top', 140, 35, $md);
-        @include size('padding-bottom', 175, 35, $md);
+        @include size('padding-top', 140, 35);
+        @include size('padding-bottom', 175, 35);
         display: flex;
         justify-content: flex-end;
 
@@ -19,7 +19,7 @@
         @include rmax($xl) {
             padding-block: 35px;
             background-size: cover;
-            justify-content: center;
+            justify-content: center; 
         }
 
         

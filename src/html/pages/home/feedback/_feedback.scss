@@ -5,6 +5,16 @@
     &__inner{
         display: grid;
         grid-template-columns: 300px 860px;
+        @include rmax($xl) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .content{
+        @include rmax($xl) {
+            margin-inline: auto;
+            text-align: center;
+        }
     }
  
     .slider-btn{
@@ -20,9 +30,20 @@
     .slider-actions{
         display: flex;
         gap: 12px;
+        @include rmax($xl) {
+            margin-inline: auto;
+            justify-content: center;
+            
+        }
     }
     .title{
         margin-bottom: 35px;
+        @include rmax($xl) {
+            &::before{
+                margin-inline: auto;
+            }
+        
+        }
     }
     .slider-btn{
         width: 32px;
@@ -70,6 +91,7 @@
 
     .slider{
         padding-block: 30px;
+        overflow: hidden;
     }
     .swiper-wrapper{
         box-sizing: border-box  !important;
