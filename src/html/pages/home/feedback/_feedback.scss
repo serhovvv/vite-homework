@@ -2,6 +2,8 @@
 
 .feedback{
     padding-block: 80px 60px;
+    @include size ('padding-top', 80, 35);
+    @include size ('padding-bottom', 60, 35);
     &__inner{
         display: grid;
         grid-template-columns: 300px 860px;

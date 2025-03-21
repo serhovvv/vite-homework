@@ -3,6 +3,8 @@
 .request{
     position: relative;
     padding-block: 80px 100px;
+    @include size ('padding-top', 80, 35);
+    @include size ('padding-bottom', 100, 35);
     &::before{
         content: '';
         position: absolute;
@@ -13,14 +15,24 @@
         // width: 95vw;
         height: 600px;
         background-color: #381C75;
+        @include rmin(1400) {
+            background-color: #381C75;
+        }
+        @include rmax($md) {
+            height: 100%;
+        }
     }
     &__inner{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 16px;
+        @include rmax($md) {
+            grid-template-columns: 1fr;
+        }
     }
 
     .form-wrapper{
         padding-left: 70px;
+        @include size('padding-left', 70, 0);
     }
 }
