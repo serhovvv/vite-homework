@@ -3,7 +3,7 @@
 
 .discount{
     @include bg-cover;
-    padding-block: 80px;
+    @include size('padding-block', 80, 35);
 
     &__inner{
         display: flex;

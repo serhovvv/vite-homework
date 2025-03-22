@@ -2,6 +2,8 @@
 
 .bikes{
     padding-block: 70px 100px;
+    @include size('padding-top', 70, 35);
+    @include size('padding-bottom', 100, 35);
 
     .tabs-nav{
         display: flex;
@@ -9,6 +11,9 @@
         align-items: center;
         gap: 12px;
         margin-bottom: 45px;
+        @include rmax($sm) {
+            justify-content: center;
+        }
         &__link {
             display: flex;
             align-items: center;
@@ -52,5 +57,20 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 24px;
+        @include rmax($lg){
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @include rmax($md){
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include rmax($xs){
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .bike-card {
+        max-width: 280px;
+        width: 100%;
+        min-width: 230px;
     }
 }
