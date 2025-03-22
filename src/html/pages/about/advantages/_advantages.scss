@@ -50,12 +50,18 @@
         @include rmax($xl) {
             gap: 15px;
         }
+        @include rmax($xs) {
+            grid-template-columns: 1fr;
+        }
 
         li{
             display: flex;
             align-items: center;
             gap: 12px;
             font-weight: 300;
+            @include rmax($xs) {
+                justify-content: center;
+            }
 
             &::before {
                 content: '';
