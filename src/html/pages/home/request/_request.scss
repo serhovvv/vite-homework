@@ -35,4 +35,8 @@
         padding-left: 70px;
         @include size('padding-left', 70, 0);
     }
+
+    iframe{
+        max-width: 100%;
+    }
 }
