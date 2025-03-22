@@ -4,28 +4,52 @@
 .advantages{
 
     &__inner{
+        @include size('padding-top', 100, 35);
+        @include size('padding-bottom', 100, 35);
         padding-block: 140px 175px;
         display: flex;
         justify-content: flex-start;
 
         background-image: url('/src/assets/images/about/about-advantages.webp');
         background-repeat: no-repeat;
-        background-size: 600px;
+        // background-size: 600px;
+        @include size('background-size', 600, 200);
         background-position: right center;
+        @include rmax($md) {
+            padding-bottom: 300px;
+            background-position: bottom center;
+            background-size: 300px;
+        }
     }
 
     .content{
         max-width: 530px;
+        @include rmax($md) {
+            text-align: center;
+            margin-inline: auto;
+        }
+        
+
     }
 
 
     .title{
         margin-bottom: 50px;
+        @include rmax($md) {
+            margin-bottom: 24px;
+            &::before{
+                margin-inline: auto;
+            }
+            
+        }
     }
     .list{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 10px 90px;
+        gap: 15px 90px;
+        @include rmax($xl) {
+            gap: 15px;
+        }
 
         li{
             display: flex;
