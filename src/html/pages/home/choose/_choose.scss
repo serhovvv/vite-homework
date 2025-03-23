@@ -36,8 +36,9 @@
     }
 
     .bikes-list{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 20px;
 
         @include rmax($xl) {
@@ -49,12 +50,6 @@
             }
         }
 
-        @include rmax($md) {
-            grid-template-columns: repeat(2, 1fr);
-            
-        }
-        @include rmax($xs) {
-            grid-template-columns: 1fr;
-        }
+       
     }
 }
