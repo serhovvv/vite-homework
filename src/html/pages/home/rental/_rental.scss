@@ -61,6 +61,10 @@
     flex-direction: column;
     gap: 16px;
 
+    &__text{
+        max-width: 400px;
+    }
+
     @include rmax($sm){
         align-items: center;
         text-align: center;

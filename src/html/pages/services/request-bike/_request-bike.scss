@@ -9,15 +9,15 @@
     @include rmax($xl) {
         background-size: 50%;
     }
-    @include rmax($md) {
+    @include rmax($lg) {
         background-size: 90%;
         background-position: center;
     }
     .form-wrapper {
         max-width: 450px;
         padding: 50px 40px;
-        background-color: rgba(#fff, 0.85);
-        @include rmax($md) {
+        background-color: rgba(#fff, 0.90);
+        @include rmax($lg) {
             margin-inline: auto;
         }
         @include rmax($xs) {

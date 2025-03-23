@@ -28,6 +28,7 @@
     .content{
         max-width: 470px;
         background-color: rgba(#fff, 0.9);
+        
         @include rmax($xl) {
             padding: 15px;
             border-radius: 5px;
@@ -46,6 +47,7 @@
     .buttons {
         display: flex;
         gap: 10px;
+        justify-content: center;
     }
 
       
